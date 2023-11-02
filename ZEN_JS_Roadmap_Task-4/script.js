@@ -1,9 +1,22 @@
 // Q1   : Print odd numbers in an array
 // Ans  :
 
+
+// => Normal Fn
+// function oddNums(oddNumArr){
+//   let oddResult = [];
+//   for(let i=0;i<oddNumArr.length;i++){
+//     if(oddNumArr[i]%2!==0){
+//       oddResult.push(oddNumArr[i]);
+//     }
+//   }
+//   return oddResult;
+// };
+// console.log(oddNums([1,2,3,4,5,6,7,8,9,10]));
+
 // => ANONYMOUS FN
-// var result = [];
-// var oddNumbers = function (arr){
+// const oddNumbers = function (arr){
+// let result = [];
 //   for(var i=0;i<arr.length;i++){
 //     if(arr[i]%2!==0){
 //         result.push(arr[i]);
@@ -14,19 +27,19 @@
 // console.log(oddNumbers([1,2,3,4,5,6,7,8,9,10]));
 
 // => IIFE
-// var result = [];
 // (function (arr){
+//   let result = [];
 //   for(var i=0;i<arr.length;i++){
 //     if(arr[i]%2!==0){
 //         result.push(arr[i]);
 //     }
 //   }
-//   console.log(result) 
+//   console.log(result);
 // })([1,2,3,4,5,6,7,8,9,10])
 
 // => ARROW FN
-// var result = [];
-// var oddNumbers = (arr) => {
+// const oddNumbers = (arr) => {
+// let result = [];
 //   for(var i=0;i<arr.length;i++){
 //     if(arr[i]%2!==0){
 //         result.push(arr[i]);
@@ -41,87 +54,168 @@
 // Q2   : Convert all the strings to title caps in a string array
 // Ans  :
 
+// => Normal Fn
+// function titleCase(titleArr){
+//   let titleCaseResult = titleArr.toString();
+//   let titleData = titleCaseResult.toLowerCase().split(" ");
+//   for(let i=0;i<titleData.length;i++){
+//     titleData[i] =  titleData[i].charAt(0).toUpperCase() + titleData[i].slice(1); 
+//   }
+//   return titleData.join(" ");
+// }
+// console.log(titleCase("this IS VIjayEswar"));
+
 // => ANONYMOUS FN
-// var titleCaps = function (str) {
-//     str = str.toLowerCase().split(' ');
-//     for (var i = 0; i < str.length; i++) {
-//       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-//     } 
-//     return str.join(' ');
-//  }
-// console.log(titleCaps("THIS IS A TEST CONTENT"));
+// const titleCaps = function (titleArr) {
+//   let titleCaseResult = titleArr.toString();
+//   let titleData = titleCaseResult.toLowerCase().split(" ");
+//   for(let i=0;i<titleData.length;i++){
+//     titleData[i] =  titleData[i].charAt(0).toUpperCase() + titleData[i].slice(1); 
+//   }
+//   return titleData.join(" ");
+// }
+// console.log(titleCaps("this IS VIjayEswar"));
 
 // => IIFE
-// (function (str) {
-//     str = str.toLowerCase().split(' ');
-//     for (var i = 0; i < str.length; i++) {
-//       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-//     } 
-//     console.log(str.join(' '));
-// })("THIS IS A TEST CONTENT")
+// (function (titleArr) {
+//   let titleCaseResult = titleArr.toString();
+//   let titleData = titleCaseResult.toLowerCase().split(" ");
+//   for(let i=0;i<titleData.length;i++){
+//     titleData[i] =  titleData[i].charAt(0).toUpperCase() + titleData[i].slice(1); 
+//   }
+//   console.log(titleData.join(' '));
+// })("this IS VIjayEswar")
 
 // => ARROW FN
-// var titleCaps = (str) => {
-//     str = str.toLowerCase().split(' ');
-//     for (var i = 0; i < str.length; i++) {
-//       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-//     } 
-//     return console.log(str.join(' '));
-//  }
-// titleCaps("THIS IS A TEST CONTENT");
+// const titleCaps = (titleArr) => {
+//   let titleCaseResult = titleArr.toString();
+//   let titleData = titleCaseResult.toLowerCase().split(" ");
+//   for(let i=0;i<titleData.length;i++){
+//     titleData[i] =  titleData[i].charAt(0).toUpperCase() + titleData[i].slice(1); 
+//   }
+//     return console.log(titleData.join(' '));
+// }
+// titleCaps("this IS VIjayEswar");
   
 // ---------------------------------------------------------------------------------------------------------------------
 
 // Q3   : Sum of all numbers in an array
 // Ans  : 
 
+// => Normal Fn
+// function sumArray(arrayNums){
+//   let sum = 0;
+//   for (var i = 0; i < arrayNums.length; i++ ) {
+//     sum += arrayNums[i];
+//   }
+//   return sum;
+// }console.log(sumArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
 // => ANONYMOUS FN
-// var sum = 0;
-// var sumArray = function(arr){
-//     for (var i = 0; i < arr.length; i++ ) {
-//         sum += arr[i];
-//     }
-//     return sum;
+
+// const sumArray = function(arrayNums){
+//  let sum = 0;
+//    for (var i = 0; i < arrayNums.length; i++ ) {
+//        sum += arrayNums[i];
+//    }
+//    return sum;
 // }
-// console.log(sumArray([1, 2, 3, 4, 5, 6, 7]));
+// console.log(sumArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 // => IIFE
-// var sum = 0;
-// (function(arr){
-//     for (var i = 0; i < arr.length; i++ ) {
-//         sum += arr[i];
-//     }
-//     console.log(sum) ;
-// })([1, 2, 3, 4, 5, 6, 7])
+// (function(arrayNums){
+//   let sum = 0;
+//    for (var i = 0; i < arrayNums.length; i++ ) {
+//        sum += arrayNums[i];
+//    }
+//    console.log(sum);
+// })([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 // => ARROW FN
-// var sum = 0;
-// var sumArray = (arr) => {
-//     for (var i = 0; i < arr.length; i++ ) {
-//         sum += arr[i];
-//     }
-//     return console.log(sum);
+// var sumArray = (arrayNums) => {
+//   let sum = 0;
+//   for (var i = 0; i < arrayNums.length; i++ ) {
+//       sum += arrayNums[i];
+//   }
+//   return console.log(sum);
 // }
-// sumArray([1, 2, 3, 4, 5, 6, 7]);
+// sumArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 // ---------------------------------------------------------------------------------------------------------------------
 
+// Q4   : Return all the prime numbers in an array
+// Ans  : 
+
 // ANONYMOUS FN
-let isPrime = function (num) {
-    if (num <= 1) return false;
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) {
-        return false;
-      }
+// let isPrime = function (num) {
+//     if (num <= 1) return false;
+//     for (let i = 2; i <= Math.sqrt(num); i++) {
+//       if (num % i === 0) {
+//         return false;
+//       }
+//     }
+//     return true;
+// }
+// let primesFromArray =  function (arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//       if (isPrime(arr[i])) {
+//         console.log(arr[i]);
+//       }
+//     }
+// }
+// let numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+// primesFromArray(numbers);  
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Q5   : Return all the palindromes in an array
+// Ans  : 
+
+// =>Normal fn
+function palindrome(palindromeArr){
+  let result = [];
+  for (let i=0;i<palindromeArr.length;i++){
+    let palindromedata = palindromeArr[i].split("").reverse().join("");
+    if(palindromedata == palindromeArr[i]){
+      result.push(palindromeArr[i]);
     }
-    return true;
+  }
+  return result;
 }
-let primesFromArray =  function (arr) {
-    for (let i = 0; i < arr.length; i++) {
-      if (isPrime(arr[i])) {
-        console.log(arr[i]);
-      }
-    }
-}
-let numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
-primesFromArray(numbers);  
+console.log(palindrome(["madam","dad","data"]));
+
+// =>ANONYMOUS FN
+// const palindromeArray = function(palindromeArr){
+//   let result = [];
+//   for (let i=0;i<palindromeArr.length;i++){
+//     let palindromedata = palindromeArr[i].split("").reverse().join("");
+//     if(palindromedata == palindromeArr[i]){
+//       result.push(palindromeArr[i]);
+//     }
+//   }
+//   return result;
+// }
+// console.log(palindrome(["madam","dad","data","121"]));
+
+// =>IIFE
+// (function(palindromeArr){
+//   let result = [];
+//   for (let i=0;i<palindromeArr.length;i++){
+//     let palindromedata = palindromeArr[i].split("").reverse().join("");
+//     if(palindromedata == palindromeArr[i]){
+//       result.push(palindromeArr[i]);
+//     }
+//   }
+//   console.log(result);
+// })(["madam","dad","data","131"]);
+
+// => ARROW FN
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+
