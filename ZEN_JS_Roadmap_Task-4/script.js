@@ -1,6 +1,7 @@
-// Question 1 : Print odd numbers in an array
+// Q1   : Print odd numbers in an array
+// Ans  :
 
-// => Anonymous FN
+// => ANONYMOUS FN
 // var result = [];
 // var oddNumbers = function (arr){
 //   for(var i=0;i<arr.length;i++){
@@ -23,8 +24,7 @@
 //   console.log(result) 
 // })([1,2,3,4,5,6,7,8,9,10])
 
-// => Arrow fn
-
+// => ARROW FN
 // var result = [];
 // var oddNumbers = (arr) => {
 //   for(var i=0;i<arr.length;i++){
@@ -36,11 +36,12 @@
 // }
 // oddNumbers([1,2,3,4,5,6,7,8,9,10]);
 
+// ---------------------------------------------------------------------------------------------------------------------
 
+// Q2   : Convert all the strings to title caps in a string array
+// Ans  :
 
-// Question 2 : Convert all the strings to title caps in a string array
-
-// => Anonymous FN
+// => ANONYMOUS FN
 // var titleCaps = function (str) {
 //     str = str.toLowerCase().split(' ');
 //     for (var i = 0; i < str.length; i++) {
@@ -59,7 +60,7 @@
 //     console.log(str.join(' '));
 // })("THIS IS A TEST CONTENT")
 
-// => Arrow fn
+// => ARROW FN
 // var titleCaps = (str) => {
 //     str = str.toLowerCase().split(' ');
 //     for (var i = 0; i < str.length; i++) {
@@ -69,10 +70,12 @@
 //  }
 // titleCaps("THIS IS A TEST CONTENT");
   
+// ---------------------------------------------------------------------------------------------------------------------
 
-// Question 3 : Sum of all numbers in an array
+// Q3   : Sum of all numbers in an array
+// Ans  : 
 
-// => Anonymous FN
+// => ANONYMOUS FN
 // var sum = 0;
 // var sumArray = function(arr){
 //     for (var i = 0; i < arr.length; i++ ) {
@@ -83,7 +86,6 @@
 // console.log(sumArray([1, 2, 3, 4, 5, 6, 7]));
 
 // => IIFE
-
 // var sum = 0;
 // (function(arr){
 //     for (var i = 0; i < arr.length; i++ ) {
@@ -92,7 +94,7 @@
 //     console.log(sum) ;
 // })([1, 2, 3, 4, 5, 6, 7])
 
-// => Arrow
+// => ARROW FN
 // var sum = 0;
 // var sumArray = (arr) => {
 //     for (var i = 0; i < arr.length; i++ ) {
@@ -102,8 +104,9 @@
 // }
 // sumArray([1, 2, 3, 4, 5, 6, 7]);
 
+// ---------------------------------------------------------------------------------------------------------------------
 
-// Anonymous fn
+// ANONYMOUS FN
 let isPrime = function (num) {
     if (num <= 1) return false;
     for (let i = 2; i <= Math.sqrt(num); i++) {
