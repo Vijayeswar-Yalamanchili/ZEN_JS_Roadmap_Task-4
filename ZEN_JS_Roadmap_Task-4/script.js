@@ -168,9 +168,49 @@
 // primesFromArray(numbers);  
 
 // =>IIFE
+// (function () {
+//     let numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+//     // Function to check if a number is prime
+//     function isPrime(num) {
+//         if (num <= 1) return false;
+//         for (let i = 2; i <= Math.sqrt(num); i++) {
+//           if (num % i === 0) {
+//             return false;
+//           }
+//         }
+//         return true;
+//     }
+//     // Function to filter prime numbers from the array
+//     function primesFromArray(arr) {
+//         let primeNumbers = [];
+//         for (let i = 0; i < arr.length; i++) {
+//           if (isPrime(arr[i])) {
+//             primeNumbers.push(arr[i]);
+//             // console.log(arr[i]);
+//           }
+//         }
+//         return primeNumbers;
+//     }
+//     var result = primesFromArray(numbers);
+//     console.log(result);
+// })()
 
 // =>ARROW FN
-
+// const isPrime = num => {
+//     if (num <= 1) return false;
+//     for (let i = 2; i <= Math.sqrt(num); i++) {
+//       if (num % i === 0) return false;
+//     }
+//     return true;
+//   };
+  
+//   const findPrimes = arr => arr.filter(num => isPrime(num));
+  
+//   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//   const primeNumbers = findPrimes(numbers);
+  
+//   console.log(primeNumbers);
+  
 // ---------------------------------------------------------------------------------------------------------------------
 
 // Q5   : Return all the palindromes in an array
@@ -233,10 +273,58 @@
 // Ans  :
 
 // =>NORMAL FN
+// let arr1 = [1,3,5,7]
+// let arr2 = [2,4,6,8]
+// function findMedian(arr1,arr2){
+//     let arry = [...arr1,...arr2];
+//     arry.sort((a,b)=> a-b)
+//     let n = arry.length;
+//     if(n%2 === 0){
+//         // (arryname[length/2]+arryname[length/2 - 1])/2 for even number formula
+//         return ((arry[n/2] + arry[(n/2)-1])/ 2);
+//     }else{
+//         // (arryname[length/2] for odd number formula
+//         return arry[Math.floor(n/2)];
+//     }
+//     return arry;
+// }
+// console.log((findMedian(arr1,arr2)));
 
 // =>ANONYMOUS FN
+// let arr1 = [1,3,5,7]
+// let arr2 = [2,4,6,8]
+// const findMedian = function(arr1,arr2){
+//     let arry = [...arr1,...arr2];
+//     arry.sort((a,b)=> a-b)
+//     let n = arry.length;
+//     if(n%2 === 0){
+//         // (arryname[length/2]+arryname[length/2 - 1])/2 for even number formula
+//         return ((arry[n/2] + arry[(n/2)-1])/ 2);
+//     }else{
+//         // (arryname[length/2] for odd number formula
+//         return arry[Math.floor(n/2)];
+//     }
+//     // return arry;
+// }
+// console.log((findMedian(arr1,arr2)));
 
 // =>IIFE
+// let arr1 = [1,3,5,7];
+// let arr2 = [2,4,6,8];
+// (function(arr1,arr2){
+//     let arry = [...arr1,...arr2];
+//     arry.sort((a,b)=> a-b)
+//     let n = arry.length;
+//     if(n%2 === 0){
+//         // (arryname[length/2]+arryname[length/2 - 1])/2     for even number formula
+//         // return ((arry[n/2] + arry[(n/2)-1])/ 2);
+//         console.log(((arry[n/2] + arry[(n/2)-1])/ 2));
+//     }else{
+//         // (arryname[length/2]                               for odd number formula
+//         // return arry[Math.floor(n/2)];
+//         console.log(arry[Math.floor(n/2)]);
+//     }
+// })(arr1,arr2)
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -286,10 +374,40 @@
 // Ans  : 
 
 // =>NORMAL FN
+function arrKtimes(arr,k){
+        for (let i = 0; i < k; i++) {
+            arr.push(arr[i])  
+        }
+        for (let i = 0; i < k; i++) {
+            arr.shift();        
+        }
+        return arr;
+    }
+console.log(arrKtimes([1,2,3,4,5,6,7,8],6));
 
 // =>ANONYMOUS FN
+// const arrKtimes = function(arr,k){
+//     for (let i = 0; i < k; i++) {
+//         arr.push(arr[i])        
+//     }
+//     for (let i = 0; i < k; i++) {
+//         arr.shift();        
+//     }
+//     return arr;
+// }
+// console.log(arrKtimes([1,2,3,4,5],2));
 
 // =>IIFE
+// (function(arr,k){
+//     for (let i = 0; i < k; i++) {
+//         arr.push(arr[i])        
+//     }
+//     for (let i = 0; i < k; i++) {
+//         arr.shift();        
+//     }
+//     console.log(arr);
+
+// })([1,2,3,4,5],2)
 
 // ---------------------------------------------------------------------------------------------------------------------
 
