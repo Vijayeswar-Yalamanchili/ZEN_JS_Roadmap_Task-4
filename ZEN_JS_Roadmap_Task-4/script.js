@@ -374,16 +374,16 @@
 // Ans  : 
 
 // =>NORMAL FN
-function arrKtimes(arr,k){
-        for (let i = 0; i < k; i++) {
-            arr.push(arr[i])  
-        }
-        for (let i = 0; i < k; i++) {
-            arr.shift();        
-        }
-        return arr;
-    }
-console.log(arrKtimes([1,2,3,4,5,6,7,8],6));
+// function arrKtimes(arr,k){
+//         for (let i = 0; i < k; i++) {
+//             arr.push(arr[i])  
+//         }
+//         for (let i = 0; i < k; i++) {
+//             arr.shift();        
+//         }
+//         return arr;
+//     }
+// console.log(arrKtimes([1,2,3,4,5,6,7,8],6));
 
 // =>ANONYMOUS FN
 // const arrKtimes = function(arr,k){
@@ -410,4 +410,3 @@ console.log(arrKtimes([1,2,3,4,5,6,7,8],6));
 // })([1,2,3,4,5],2)
 
 // ---------------------------------------------------------------------------------------------------------------------
-
